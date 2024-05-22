@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Advent_Pro } from "next/font/google";
 import "./globals.css";
+import { fjalla } from "./fonts";
 
-const advnt = Advent_Pro({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "gurjit dhaliwal",
@@ -16,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={advnt.className}>{children}</body>
+      <body className={fjalla.className}>{children}</body>
     </html>
   );
 }
