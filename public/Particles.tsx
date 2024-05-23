@@ -1,118 +1,151 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import {
-  type Container,
-  type ISourceOptions,
-  MoveDirection,
-  OutMode,
-} from "@tsparticles/engine";
-// import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-// import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
+import { type ISourceOptions } from "@tsparticles/engine";
 
-const App = () => {
+import { loadSlim } from "@tsparticles/slim";
+
+function AmongUsParticles() {
   const [init, setInit] = useState(false);
 
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
       await loadSlim(engine);
-      //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
-
-  const options: ISourceOptions = useMemo(
-    () => ({
-      background: {
-        color: {
-          value: "#0d47a1",
+  const options: ISourceOptions = {
+    fpsLimit: 165,
+    fullScreen: {
+      enable: true,
+    },
+    particles: {
+      groups: {
+        z5000: {
+          number: {
+            value: 70,
+          },
+          zIndex: {
+            value: 50,
+          },
+        },
+        z7500: {
+          number: {
+            value: 30,
+          },
+          zIndex: {
+            value: 75,
+          },
+        },
+        z2500: {
+          number: {
+            value: 50,
+          },
+          zIndex: {
+            value: 25,
+          },
+        },
+        z1000: {
+          number: {
+            value: 40,
+          },
+          zIndex: {
+            value: 10,
+          },
         },
       },
-      fpsLimit: 120,
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
-          onHover: {
-            enable: true,
-            mode: "repulse",
-          },
+      number: {
+        value: 200,
+        density: {
+          enable: false,
         },
-        modes: {
-          push: {
-            quantity: 4,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-          },
+      },
+      color: {
+        value: "#f4f6f7",
+        animation: {
+          enable: false,
+          speed: 20,
+          sync: true,
         },
+      },
+      shape: {
+        type: "circle",
+      },
+      opacity: {
+        value: 1,
+        animation: {
+          enable: false,
+          speed: 3,
+          sync: false,
+        },
+      },
+      size: {
+        value: 3,
+      },
+      move: {
+        angle: {
+          value: 10,
+          offset: 0,
+        },
+        enable: true,
+        speed: 5,
+        direction: "right",
+      },
+      zIndex: {
+        value: 5,
+        opacityRate: 0.5,
+      },
+    },
+    background: {
+      color: "#117a65",
+    },
+    emitters: {
+      position: {
+        y: 55,
+        x: -5,
+      },
+      rate: {
+        delay: 7,
+        quantity: 1,
+      },
+      size: {
+        width: 0,
+        height: 0,
       },
       particles: {
-        color: {
-          value: "#ffffff",
-        },
-        links: {
-          color: "#ffffff",
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
+        size: {
+          value: 40,
         },
         move: {
-          direction: MoveDirection.none,
-          enable: true,
+          speed: 10,
           outModes: {
-            default: OutMode.out,
+            default: "out",
           },
-          random: false,
-          speed: 6,
-          straight: false,
+          straight: true,
         },
-        number: {
-          density: {
+        zIndex: {
+          value: 0,
+        },
+        rotate: {
+          value: {
+            min: 0,
+            max: 360,
+          },
+          animation: {
             enable: true,
+            speed: 10,
+            sync: true,
           },
-          value: 80,
-        },
-        opacity: {
-          value: 0.5,
-        },
-        shape: {
-          type: "circle",
-        },
-        size: {
-          value: { min: 1, max: 5 },
         },
       },
-      detectRetina: true,
-    }),
-    [],
+    },
+  };
+
+  return (
+    <div>{init && <Particles options={options} className="-z-50 " />}</div>
   );
+}
 
-  if (init) {
-    return (
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-    );
-  }
-
-  return <></>;
-};
+export default AmongUsParticles;
