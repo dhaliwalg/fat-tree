@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { mont } from "./fonts";
 import AmongUsParticles from "@/public/Particles";
 import Footer from "./footer";
@@ -11,7 +10,7 @@ export default function Home() {
         <AmongUsParticles />
       </div>
       <div className="z-10 flex flex-col justify-center items-center">
-        <Navbar />
+        <Navbar/>
         <main>
           <h1 className="text-4xl">{"gurjit singh dhaliwal"}</h1>
         </main>
