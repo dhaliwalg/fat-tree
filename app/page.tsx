@@ -1,17 +1,34 @@
-"use client";
 import Image from "next/image";
 import { mont } from "./fonts";
 import AmongUsParticles from "@/public/Particles";
+import Footer from "./footer";
+import { Navbar } from "./nav";
 
 export default function Home() {
   return (
-    <main>
-      <AmongUsParticles />
-      <div className="z-1 flex min-h-screen flex-col items-center justify-between p-24">
-        <div className="z-10 w-full max-w-5xl items-center justify-between lg:flex">
-          <p className="text-3xl">gurjit singh dhaliwal</p>
-        </div>
+    <div className="flex min-h-screen items-center justify-center text-wrap">
+      <div className="fixed inset-0 z-0">
+        <AmongUsParticles />
       </div>
-    </main>
+      <div className="z-10 flex flex-col justify-center items-center">
+        <Navbar />
+        <main>
+          <h1 className="text-4xl">{"gurjit singh dhaliwal"}</h1>
+        </main>
+        <div className="py-8 text-wrap text-lg w-1/3">
+          <p className={mont.className}>
+            {
+              "hi! this is my portfolio, i graduated from UMD in 2023 w/ a bachelor's in computer science and a minor in philosophy & ethics."
+            }
+            <br />
+            {"i love to write philosophical papers and short stories. "}
+            {
+              "other than writing, i like to compete in any activity. there's nothing i hate more than being bad. i've competed in a bhangra and basketball over the years."
+            }
+          </p>
+        </div>
+        <Footer />
+      </div>
+    </div>
   );
 }

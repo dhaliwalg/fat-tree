@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { fjalla } from "./fonts";
+import { Navbar } from "./nav";
+import Footer from "./footer";
 
 export const metadata: Metadata = {
   title: "gurjit dhaliwal",
@@ -14,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Navbar />
       <body className={fjalla.className}>{children}</body>
+      <Footer />
     </html>
   );
 }

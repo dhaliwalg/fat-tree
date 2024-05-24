@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { type ISourceOptions } from "@tsparticles/engine";
@@ -144,7 +145,7 @@ function AmongUsParticles() {
   };
 
   return (
-    <div>{init && <Particles options={options} className="-z-50 " />}</div>
+    <div>{init && <Particles options={options} className="-z-50" />}</div>
   );
 }
 
