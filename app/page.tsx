@@ -1,4 +1,5 @@
 import { mont } from "./fonts";
+import { anek } from "./fonts";
 import AmongUsParticles from "@/public/Particles";
 import Footer from "./footer";
 import { Navbar } from "./nav";
@@ -13,6 +14,12 @@ export default function Home() {
         <Navbar/>
         <main>
           <h1 className="text-4xl">{"gurjit singh dhaliwal"}</h1>
+          <div className="flex flex-col justify-center items-center py-4">
+            <div className={anek.className}>
+            <h1 className="text-xl">{"ਗੁਰਜੀਤ ਸਿੰਘ ਧਾਲੀਵਾਲ"}</h1>
+            </div>
+
+          </div>
         </main>
         <div className="py-8 text-wrap text-lg w-1/3">
           <p className={mont.className}>
