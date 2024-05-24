@@ -3,8 +3,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 export default function Footer() {
   return (
-    <>
-      <div className="flex flex-row text-xl">
+      <div className="flex flex-row text-xl mt-8">
         <Link
           href={"https://github.com/dhaliwalg"}
           className="hover:underline flex items-center mr-4"
@@ -29,6 +28,5 @@ export default function Footer() {
           <p>{"cydia_repo"}</p>
         </Link>
       </div>
-    </>
   );
 }

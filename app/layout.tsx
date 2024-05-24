@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { fjalla } from "./fonts";
+import { fjalla } from "./utilities/fonts";
+import { Navbar } from "./components/nav";
+import Footer from "./components/footer";
+import AmongUsParticles from "@/public/Particles";
 
 export const metadata: Metadata = {
-  title: "gurjit dhaliwal",
+  title: "Gurjit Dhaliwal",
   description: "an ai adaptive portfolio powered by gemini",
 };
 
@@ -13,8 +16,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={fjalla.className}>{children}</body>
-    </html>
+      <html lang="en">
+        <body className={fjalla.className}>
+          <div className="flex min-h-full items-center justify-center text-wrap">
+            <div className="fixed inset-0 z-0">
+              <AmongUsParticles />
+            </div>
+            <div className="z-10 flex flex-col justify-center items-center mt-8">
+              <Navbar />
+              {children}
+              <Footer/>
+            </div>
+          </div>
+        </body>
+      </html>
   );
 }
