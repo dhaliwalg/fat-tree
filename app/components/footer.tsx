@@ -3,7 +3,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 export default function Footer() {
   return (
-      <div className="flex flex-row text-xl mt-8">
+      <div className="flex flex-row text-xl mt-8 md:mb-8">
         <Link
           href={"https://github.com/dhaliwalg"}
           className="hover:underline flex items-center mr-4"
