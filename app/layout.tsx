@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
       <html lang="en">
         <body className={fjalla.className}>
-          <div className="flex min-h-full items-center justify-center text-wrap">
+          <div className="flex min-h-screen items-center justify-center text-wrap">
             <div className="fixed inset-0 z-0">
               <AmongUsParticles />
             </div>
