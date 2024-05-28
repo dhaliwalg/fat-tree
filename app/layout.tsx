@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en" className="w-full h-full m-0 p-0 overflow-x-hidden">
+      <html lang="en" className="w-full h-full m-0 p-0 overflow-x-hidden md:mb-20">
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
         <body className={fjalla.className}>
           <div className="flex min-h-screen items-center justify-center text-wrap">
