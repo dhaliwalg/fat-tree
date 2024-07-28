@@ -16,20 +16,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en" className="w-full h-full m-0 p-0 overflow-x-hidden md:mb-20">
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-        <body className={fjalla.className}>
-          <div className="flex min-h-screen items-center justify-center text-wrap">
-            <div className="fixed inset-0 z-0">
-              <AmongUsParticles />
-            </div>
-            <div className="z-10 flex flex-col justify-center items-center mt-8">
-              <Navbar />
-              {children}
-              <Footer/>
-            </div>
+    <html
+      lang="en"
+      className="w-full h-full m-0 p-0 overflow-x-hidden md:mb-20"
+    >
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+      />
+      <AmongUsParticles />
+      <body className={fjalla.className}>
+        <div className="flex min-h-screen items-center justify-center text-wrap">
+          <div className="fixed inset-0 z-0"></div>
+          <header className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+            <Navbar />
+          </header>
+          <div className="z-10 flex-grow flex flex-col justify-center items-center">
+            {children}
+            <Footer />
           </div>
-        </body>
-      </html>
+        </div>
+      </body>
+    </html>
   );
 }
