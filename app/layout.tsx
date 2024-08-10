@@ -27,11 +27,10 @@ export default function RootLayout({
       <AmongUsParticles />
       <body className={fjalla.className}>
         <div className="flex min-h-screen items-center justify-center text-wrap">
-          <div className="fixed inset-0 z-0"></div>
-          <header className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+          <header className="absolute -mt-[20%] md:-mt-[10%] top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
             <Navbar />
           </header>
-          <div className="z-10 flex-grow flex flex-col justify-center items-center">
+          <div className="z-10 flex-grow flex flex-col justify-center items-center pb-[8%] md:pb-[8%]">
             {children}
             <Footer />
           </div>

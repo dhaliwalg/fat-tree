@@ -29,7 +29,7 @@ const projs = [
 
 export default function Page() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center pt-[40%] w-3/4 md:pt-[10%]">
       <h1 className="text-3xl">projects:</h1>
       <div className={mont.className}>
         {Object.entries(projs).map(([path, { title, href }]) => {

@@ -30,7 +30,7 @@ const writingLinks = [
 const pictures = [];
 export default function Page() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center pt-[25%] md:pt-[10%]">
       <h1 className="text-3xl">bhangra performances:</h1>
       <div className={mont.className}>
         {Object.entries(bhangraLinks).map(([path, { title, href }]) => {
