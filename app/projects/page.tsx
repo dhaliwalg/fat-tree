@@ -3,26 +3,33 @@ import { mont } from "../utilities/fonts";
 
 const projs = [
   {
-    title: "iOS exploits (obj-c + logos)",
-    href: "https://github.com/dhaliwalg/tweaks",
+    title: "birthday countdown (vue.js + pinia)",
+    href: "https://bday-bash.vercel.app/",
   },
   {
-    title: "smarternships (android + firebase)",
-    href: "https://github.com/MichaelG922/Smarternships",
+    title: "houston sikh youth camp (react + python)",
+    href: "https://houstonsikhyouthcamp.org/",
   },
   {
     title: "VALORANT exploratory analysis (python + ml)",
     href: "https://dhaliwalg.github.io/320finalproj/",
   },
   {
+    title: "smarternships (android + firebase)",
+    href: "https://github.com/MichaelG922/Smarternships",
+  },
+  {
+    title: "pagg pros (react + next.js)",
+    href: "https://paggpros.vercel.app/",
+  },
+  {
+    title: "iOS exploits (obj-c + logos)",
+    href: "https://github.com/dhaliwalg/tweaks",
+  },
+  {
     title: "discord bots (python + discord api)",
     href: "https://github.com/dhaliwalg/discordbots",
   },
-  {
-    title: "houston sikh youth camp (react + python)",
-    href: "https://houstonsikhyouthcamp.org/",
-  },
-  { title: "pagg pros (nextjs + react)", href: "https://paggpros.vercel.app/" },
   { title: "this website (nextjs + react)", href: "\\" },
   { title: "others i've forgotten", href: "" },
 ];
