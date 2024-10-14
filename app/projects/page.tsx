@@ -15,16 +15,16 @@ const projs = [
     href: "https://dhaliwalg.github.io/320finalproj/",
   },
   {
-    title: "smarternships (android + firebase)",
-    href: "https://github.com/MichaelG922/Smarternships",
-  },
-  {
     title: "pagg pros (react + next.js)",
     href: "https://paggpros.vercel.app/",
   },
   {
     title: "iOS exploits (obj-c + logos)",
     href: "https://github.com/dhaliwalg/tweaks",
+  },
+  {
+    title: "smarternships (android + firebase)",
+    href: "https://github.com/MichaelG922/Smarternships",
   },
   {
     title: "discord bots (python + discord api)",
